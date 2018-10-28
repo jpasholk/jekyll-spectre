@@ -1,0 +1,25 @@
+<ul class="pagination">
+  {% if paginator.previous_page %}
+  <li class="page-item page-prev">
+    <a href="{{ paginator.previous_page_path | relative_url }}">
+      <div class="page-item-subtitle">Previous</div>
+    </a>
+  </li>
+  {% else %}
+  <li class="page-item page-prev">
+    <div class="page-item-subtitle">Previous</div>
+  </li>
+  {% endif %}
+
+  {% if paginator.next_page %}
+  <li class="page-item page-next">
+    <a href="{{ paginator.next_page_path | relative_url }}" class="next">
+      <div class="page-item-subtitle">Next</div>
+    </a>
+  </li>
+  {% else %}
+  <li class="page-item page-next">
+    <div class="page-item-subtitle ">Next</div>
+  </li>
+  {% endif %}
+</ul>

@@ -1,0 +1,20 @@
+---
+layout: default
+---
+
+<article class="container m-2 p-2 columns">
+  <section class="tile column col-12 p-2 m-2">
+    <div class="column col-2 hide-md"></div>
+
+      <div class="tile-content col-8 p-2 m-2">
+        <h3 class="tile-title">{{ page.title }}</h3>
+        <span class="tile-subtitle text-gray">{{ page.date | date_to_long_string: "ordinal" }}</span>
+        <div class="pt-2">
+          {{content}}
+        </div>
+        {% include post-pagination.html %}
+      </div>
+
+    <div class="column col-2 hide-md"></div>
+  </section>
+</article>

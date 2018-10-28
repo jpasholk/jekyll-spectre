@@ -1,0 +1,32 @@
+---
+layout: default
+---
+
+<body>
+
+  <section>
+    <div class="empty">
+        <p class="empty-title h2">jekyll-spectre</p>
+        <p class="empty-subtitle">A minimal jekyll theme for writing.</p>
+      <div class="empty-action">
+        <button class="btn btn-primary btn-lg">Install jekyll-spectre</button>
+      </div>
+    </div>
+  </section>
+
+  <article class="container m-2 p-2 columns">
+    <section class="tile column col-12 p-2 m-2">
+      <div class="column col-2 hide-md"></div>
+
+        {% for post in paginator.posts %}
+        <div class="tile-content col-8 p-2 m-2">
+          <h3 class="tile-title"><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h3>
+          <span class="tile-subtitle text-gray">{{ post.date | date_to_long_string: "ordinal" }}</span>
+          <p class="">{{ post.content }}</p>
+          {% endfor %}
+          {% include pagination.html %}
+        </div>
+      <div class="column col-2 hide-md"></div>
+    </section>
+  </article>
+</body>
