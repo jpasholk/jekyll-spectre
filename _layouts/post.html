@@ -8,7 +8,7 @@ layout: default
 
       <div class="tile-content col-8 p-2 m-2">
         <h3 class="tile-title">{{ page.title }}</h3>
-        <span class="tile-subtitle text-gray">{{ page.date | date_to_long_string: "ordinal" }}</span>
+        <span class="tile-subtitle text-gray">{{page.date | date: "%b %d, %Y "}}</span>
         <div class="pt-2">
           {{content}}
         </div>
