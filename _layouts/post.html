@@ -2,19 +2,25 @@
 layout: default
 ---
 
-<article class="container m-2 p-2 columns">
-  <section class="tile column col-12 p-2 m-2">
-    <div class="column col-2 hide-md"></div>
+<article class="container p-2">
+  <section class="columns pt-2">
+    <div class="column col-1"></div>
 
-      <div class="tile-content col-8 p-2 m-2">
-        <h3 class="tile-title">{{ page.title }}</h3>
-        <span class="tile-subtitle text-gray">{{page.date | date: "%b %d, %Y "}}</span>
-        <div class="pt-2">
-          {{content}}
+    <section class="tile column col-10 col-mx-auto pt-2">
+      <div class="column col-2 hide-md"></div>
+
+        <div class="tile-content">
+          <h3 class="tile-title">{{ page.title }}</h3>
+          <span class="tile-subtitle text-gray">{{page.date | date: "%b %d, %Y "}}</span>
+          <div class="pt-2">
+            {{content}}
+          </div>
+          {% include post-pagination.html %}
         </div>
-        {% include post-pagination.html %}
-      </div>
 
-    <div class="column col-2 hide-md"></div>
+      <div class="column col-2 hide-md"></div>
+    </section>
+    <div class="column col-1"></div>
+
   </section>
 </article>
