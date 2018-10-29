@@ -16,7 +16,7 @@
 title: Jekyll Spectre
 description: >- # this means to ignore newlines until "baseurl:"
   A simple jekyll theme focusing on writing.
-baseurl: "/jekyll-spectre" # the subpath of your site, e.g. /blog
+baseurl: "/jekyll-spectre/" # the subpath of your site, e.g. /blog
 url: "https://jpasholk.com/jekyll-spectre/" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username:
 github_username:
