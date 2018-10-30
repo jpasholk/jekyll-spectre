@@ -1,3 +1,4 @@
+<!--
 <ul class="pagination pt-2">
   {% if paginator.previous_page %}
   <li class="page-item page-prev">
@@ -20,6 +21,38 @@
   {% else %}
   <li class="page-item page-next">
     <div class="page-item-subtitle ">Next</div>
+  </li>
+  {% endif %}
+</ul>
+-->
+
+<ul class="pagination pt-2">
+  {% if page.previous.url %}
+  <li class="page-item page-prev">
+    <a href="{{ page.previous.url | prepend: site.baseurl | replace: '//', '/' }}" data-toggle="tooltip" data-placement="top" title="{{page.previous.title}}">
+      <div class="page-item-subtitle">Previous</div>
+      <div class="page-item-title h5">{{ page.previous.title | truncate: 15 }}</div>
+    </a>
+  </li>
+  {% else %}
+  <li>
+    <a href="{{"/" | relative_url}}">
+      <div class="page-item-subtitle">Go</div>
+      <div class="page-item-title h5">Back</div>
+    </a>
+  </li>
+  {% endif %}
+  {% if page.next.url %}
+  <li class="page-item page-next">
+    <a href="{{ page.next.url | prepend: site.baseurl | replace: '//', '/' }}" data-toggle="tooltip" data-placement="top" title="{{page.next.title}}">
+      <div class="page-item-subtitle">Next</div>
+      <div class="page-item-title h5">{{ page.next.title | truncate: 15 }}</div>
+    </a>
+  </li>
+  {% else %}
+  <li class="page-item page-next">
+    <div class="page-item-subtitle">Latest</div>
+    <div class="page-item-title h5">Post</div>
   </li>
   {% endif %}
 </ul>

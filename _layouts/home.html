@@ -38,6 +38,10 @@ layout: default
             <h3 class="tile-title"><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h3>
             <span class="tile-subtitle text-gray">{{post.date | date: "%b %d, %Y "}}</span>
             <p class="">{{ post.content }}</p>
+            {% unless forloop.last %}
+            <div class="divider"></div>
+            <br>
+            {% endunless %}
             {% endfor %}
             {% include pagination.html %}
           </div>
