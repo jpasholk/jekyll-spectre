@@ -1,0 +1,9 @@
+/* Keep long code lines inside the post column instead of widening the tile. */
+.tile-content {
+  min-width: 0;
+}
+
+.tile-content pre {
+  max-width: 100%;
+  overflow-x: auto;
+}
